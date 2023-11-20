@@ -1,0 +1,10 @@
+form{
+  max-width: 500px;
+  background-color: #93c5fd;
+  border: 1px black solid;
+}
+
+button{
+  width: 500px;
+  background-color: ghostwhite;
+}
