@@ -1,0 +1,51 @@
+### GET list of tasks
+GET localhost:48237/
+Accept: application/json
+
+### GET list of non-completed tasks
+GET localhost:48237/?completed=false
+Accept: application/json
+
+### GET list of comleted tasks
+GET localhost:48237/?completed=true
+Accept: application/json
+
+### GET list of archived tasks
+GET localhost:48237/?archived=false
+Accept: application/json
+
+### GET list of tasks sorted by ID ASC
+GET localhost:48237/?_sort=id&_order=asc
+Accept: application/json
+
+### GET list of tasks sorted by ID DESC
+GET localhost:48237/?_sort=id&_order=desc
+Accept: application/json
+
+### GET single task
+GET localhost:48237/1
+Accept: application/json
+
+### POST new task
+POST localhost:48237/
+Content-Type: application/json
+{
+  "title": "Pierwsze zadanie",
+  "deadline": "2022-01-28",
+  "completed": false,
+  "archived": false
+}
+
+### PUT update task
+PUT localhost:48237/3
+Content-Type: application/json
+{
+  "title": "Pierwsze zadanie",
+  "deadline": "2022-01-28",
+  "completed": true,
+  "archived": false
+}
+
+### DELETE task
+DELETE localhost:48237/3
+Content-Type: application/json
