@@ -63,6 +63,23 @@ export class TasksComponent implements OnInit {
 
     }
 
+  canAddTask() {
+    if (this.isProcessing) {
+      return false;
+    }
+
+    return !!this.newTask.title;
   }
+
+
+  canArchiveCompleted() {
+    for (const task of this.tasks) {
+      if (task.completed) {
+        return true;
+      }
+    }
+    return false;
+  }
+}
 
 
